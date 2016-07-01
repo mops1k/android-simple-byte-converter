@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="converter.abyte.mops1k.biteconverter.Converter">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/convertNumber"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertNumber"
+        android:layout_alignParentStart="true"
+        android:id="@+id/fromGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бит"
+            android:id="@+id/formBit"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Байт"
+            android:id="@+id/fromByte" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Килобайт"
+            android:id="@+id/fromKb" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мегабайт"
+            android:id="@+id/fromMb" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Гигабайт"
+            android:id="@+id/fromGb" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Терабайт"
+            android:id="@+id/fromTb" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertNumber"
+        android:id="@+id/toGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бит"
+            android:id="@+id/toBit"
+            android:checked="true"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Байт"
+            android:id="@+id/toByte"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Килобайт"
+            android:id="@+id/toKb"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мегабайт"
+            android:id="@+id/toMb"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Гигабайт"
+            android:id="@+id/toGb"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Терабайт"
+            android:id="@+id/toTb"
+            android:layout_gravity="right" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертировать"
+        android:id="@+id/convertButton"
+        android:onClick="ClickConvertButton"
+        android:layout_below="@+id/fromGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="77dp"
+        android:layout_alignEnd="@+id/fromGroup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/resultView"
+        android:layout_below="@+id/fromGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:layout_alignEnd="@+id/convertButton"
+        android:onClick="CopyResultValue"
+        android:maxLines="4"
+        android:minLines="1" />
+
+</RelativeLayout>
